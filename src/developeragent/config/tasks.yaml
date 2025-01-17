@@ -9,12 +9,12 @@ development_task:
       - Test cases to validate the functionality and ensure code quality.
   agent: developer
 
-debugging_task:
-  description: >
-    Identify and fix issues in a project related to {topic}.
-    Debug {topic}-based backend services and ensure optimal performance, reliability, and correctness.
-  expected_output: >
-    - A detailed summary of the identified issues and their root causes.
-    - Updated and error-free Python code.
-    - Verification logs or test cases confirming that the issues are resolved.
-  agent: developer
+# debugging_task:
+#   description: >
+#     Identify and fix issues in a project related to {topic}.
+#     Debug {topic}-based backend services and ensure optimal performance, reliability, and correctness.
+#   expected_output: >
+#     - A detailed summary of the identified issues and their root causes.
+#     - Updated and error-free Python code.
+#     - Verification logs or test cases confirming that the issues are resolved.
+#   agent: developer

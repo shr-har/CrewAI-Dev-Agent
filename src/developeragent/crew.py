@@ -2,7 +2,8 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai import LLM, Agent, Crew, Process, Task
 # from docling_core.types.doc.document import DoclingDocument
-from crewai.knowledge.source.crew_docling_source import CrewDoclingSource
+# from crewai.knowledge.source.crew_docling_source import CrewDoclingSource
+from crewai.knowledge.source.pdf_knowledge_source import PDFKnowledgeSource
 # from crewai.knowledge.source.string_knowledge_source import StringKnowledgeSource
 # print(DoclingDocument)
 
@@ -11,9 +12,9 @@ from crewai.knowledge.source.crew_docling_source import CrewDoclingSource
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 # Create a knowledge source
-content_source = CrewDoclingSource(
+content_source = PDFKnowledgeSource(
     file_paths=[
-    "SurfaceAnalyzer_Epic and user stories.docx",
+    "SurfaceAnalyzer_Inputs for User Story Generation.pdf",
     ],
 )
 # Create an LLM with a temperature of 0 to ensure deterministic outputs
@@ -48,12 +49,12 @@ class CrewaiDeveloperagent():
 			config=self.tasks_config['development_task'],
 		)
 
-	@task
-	def debugging_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['debugging_task'],
-			output_file='report.md'
-		)
+	# @task
+	# def debugging_task(self) -> Task:
+	# 	return Task(
+	# 		config=self.tasks_config['debugging_task'],
+	# 		output_file='report.md'
+	# 	)
 
 	@crew
 	def crew(self) -> Crew:
@@ -66,7 +67,6 @@ class CrewaiDeveloperagent():
 			tasks=self.tasks, # Automatically created by the @task decorator
 			process=Process.sequential,
 			verbose=True,
-			knowledge_sources=[
-			content_source]
+			knowledge_sources=[content_source]
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)

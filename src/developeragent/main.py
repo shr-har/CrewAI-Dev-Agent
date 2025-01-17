@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': "Generate a code in python for user story- 'Configuration command'."
+        'topic': "Create a class Feature'."
     }
     # print("Crewaideveloper agent",CrewaiDeveloperagent())
     CrewaiDeveloperagent().crew().kickoff(inputs=inputs)
@@ -29,7 +29,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "Generate a code in python for user story- 'Configuration command'."
+        "topic": "Create a class Feature"
     }
     try:
         CrewaiDeveloperagent().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -52,7 +52,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "Generate a code in python for user story- 'Configuration command'"
+        "topic": "Create a class Feature"
     }
     try:
         CrewaiDeveloperagent().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
