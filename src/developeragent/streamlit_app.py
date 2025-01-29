@@ -2,8 +2,8 @@ import streamlit as st
 import requests
 import time
 
-API_BASE_URL = "https://crewai-dev-agent-150c1ca3-3ae4-47dd-b769-69-87e7d44a.crewai.com"
-BEARER_TOKEN = "f11fe6050cf1"  # Replace with your actual token
+API_BASE_URL = "https://crewai-dev-agent-0e0f358e-1773-4c2c-bb30-20-e6402b3e.crewai.com"
+BEARER_TOKEN = "e03db76ea59c"  # Replace with your actual token
 
 HEADERS = {"Authorization": f"Bearer {BEARER_TOKEN}"}
 
