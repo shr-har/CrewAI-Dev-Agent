@@ -1,20 +1,18 @@
 development_task:
   description: >
-    Design and implement a project or feature focused on {topic}.
-    Use your expertise in {topic} to create scalable, maintainable, and high-performance solutions, adhering to best practices.
+    Architect and implement a full-stack feature focused on {topic}, using FastAPI for the backend and React for the frontend.
+    Ensure the solution follows best practices in authentication, scalability, and performance optimization.
   expected_output: >
-    - A fully implemented and functional solution, including:
-      - A {topic}-based backend or feature.
-      - Documentation detailing the architecture, setup, and usage.
-      - Test cases to validate the functionality and ensure code quality.
+    - A production-ready FastAPI backend with:
+      - Secure authentication (OAuth2/JWT) focused on {topic}.
+      - Well-documented REST/GraphQL APIs.
+      - Database schema with migrations and ORM integration.
+    - A React frontend that:
+      - Fetches and displays {topic}-related backend data dynamically.
+      - Implements authentication and state management.
+      - Uses modern UI components (Material-UI/TailwindCSS).
+    - Complete documentation covering:
+      - API endpoints with OpenAPI documentation.
+      - Database schema and relationships related to {topic}.
+      - Deployment instructions for Dockerized environments.
   agent: developer
-
-# debugging_task:
-#   description: >
-#     Identify and fix issues in a project related to {topic}.
-#     Debug {topic}-based backend services and ensure optimal performance, reliability, and correctness.
-#   expected_output: >
-#     - A detailed summary of the identified issues and their root causes.
-#     - Updated and error-free Python code.
-#     - Verification logs or test cases confirming that the issues are resolved.
-#   agent: developer

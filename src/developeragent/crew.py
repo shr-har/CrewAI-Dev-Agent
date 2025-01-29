@@ -14,7 +14,7 @@ from crewai.knowledge.source.pdf_knowledge_source import PDFKnowledgeSource
 # Create a knowledge source
 content_source = PDFKnowledgeSource(
     file_paths=[
-    "SurfaceAnalyzer_Inputs for User Story Generation.pdf",
+    "Detailed_FastAPI_Guide.pdf",
     ],
 )
 # Create an LLM with a temperature of 0 to ensure deterministic outputs
@@ -47,6 +47,7 @@ class CrewaiDeveloperagent():
 	def development_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['development_task'],
+			output_file='report.md'
 		)
 
 	# @task
