@@ -1,0 +1,11 @@
+# Ignore environment files
+.env
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore the report.md
+report.md
+
+#Ignore uv.lock
+uv.lock

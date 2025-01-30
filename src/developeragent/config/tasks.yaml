@@ -1,0 +1,18 @@
+development_task:
+  description: >
+    Architect and implement a full-stack feature focused on {topic}, using FastAPI for the backend and React for the frontend.
+    Ensure the solution follows best practices in authentication, scalability, and performance optimization.
+  expected_output: >
+    - A production-ready FastAPI backend with:
+      - Secure authentication (OAuth2/JWT) focused on {topic}.
+      - Well-documented REST/GraphQL APIs.
+      - Database schema with migrations and ORM integration.
+    - A React frontend that:
+      - Fetches and displays {topic}-related backend data dynamically.
+      - Implements authentication and state management.
+      - Uses modern UI components (Material-UI/TailwindCSS).
+    - Complete documentation covering:
+      - API endpoints with OpenAPI documentation.
+      - Database schema and relationships related to {topic}.
+      - Deployment instructions for Dockerized environments.
+  agent: developer
