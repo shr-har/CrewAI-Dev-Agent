@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': "Create code for Building Authentication & Authorization Systems with FastAPI"
+        'topic': "Create code in python for user story-Configuration command."
     }
     # print("Crewaideveloper agent",CrewaiDeveloperagent())
     CrewaiDeveloperagent().crew().kickoff(inputs=inputs)
@@ -29,7 +29,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "CI/CD Pipeline for FastAPI & React with Docker and Kubernetes"
+        "topic": "Create code in python for user story-Configuration command."
     }
     try:
         CrewaiDeveloperagent().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)

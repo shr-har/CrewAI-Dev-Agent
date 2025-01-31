@@ -1,18 +1,66 @@
-development_task:
+# development_task:
+#   description: >
+#     Architect and implement a full-stack feature focused on {topic}, using FastAPI for the backend and React for the frontend.
+#     Ensure the solution follows best practices in authentication, scalability, and performance optimization.
+#   expected_output: >
+#     - A production-ready FastAPI backend with:
+#       - Secure authentication (OAuth2/JWT) focused on {topic}.
+#       - Well-documented REST/GraphQL APIs.
+#       - Database schema with migrations and ORM integration.
+#     - A React frontend that:
+#       - Fetches and displays {topic}-related backend data dynamically.
+#       - Implements authentication and state management.
+#       - Uses modern UI components (Material-UI/TailwindCSS).
+#     - Complete documentation covering:
+#       - API endpoints with OpenAPI documentation.
+#       - Database schema and relationships related to {topic}.
+#       - Deployment instructions for Dockerized environments.
+#   agent: developer
+
+code_generation:
   description: >
-    Architect and implement a full-stack feature focused on {topic}, using FastAPI for the backend and React for the frontend.
-    Ensure the solution follows best practices in authentication, scalability, and performance optimization.
+    Generate a full-stack feature implementation based on the provided user stories.
+    The feature should use FastAPI for backend logic and React for frontend interaction.
   expected_output: >
-    - A production-ready FastAPI backend with:
-      - Secure authentication (OAuth2/JWT) focused on {topic}.
+    - A production-ready FastAPI backend:
+      - Secure authentication (OAuth2/JWT).
       - Well-documented REST/GraphQL APIs.
       - Database schema with migrations and ORM integration.
-    - A React frontend that:
-      - Fetches and displays {topic}-related backend data dynamically.
+    - A React frontend:
+      - Fetches and displays backend data dynamically.
       - Implements authentication and state management.
       - Uses modern UI components (Material-UI/TailwindCSS).
     - Complete documentation covering:
-      - API endpoints with OpenAPI documentation.
-      - Database schema and relationships related to {topic}.
+      - API endpoints (OpenAPI).
+      - Database schema and relationships.
       - Deployment instructions for Dockerized environments.
+  agent: developer
+
+code_refactoring:
+  description: >
+    Improve the structure, readability, and efficiency of existing code while maintaining its functionality.
+  expected_output: >
+    - Optimized and cleaner code with improved readability.
+    - Better modularization and function/class restructuring.
+    - Performance optimizations (caching, indexing, async execution).
+    - Security enhancements (validation, authentication updates).
+  agent: developer
+
+code_conversion:
+  description: >
+    Convert code from one language to another while preserving logic and structure.
+  expected_output: >
+    - Equivalent implementation in the target language.
+    - Performance and optimization recommendations.
+    - Documentation for the converted code.
+  agent: developer
+
+qa_assistant:
+  description: >
+    Engage in a conversational manner, answering follow-up questions about generated, refactored, or converted code.
+    Maintain context from previous discussions to provide relevant and precise responses.
+  expected_output: >
+    - Clear and concise answers to user questions.
+    - Retained context from the conversation.
+    - Additional examples or clarifications when needed.
   agent: developer
